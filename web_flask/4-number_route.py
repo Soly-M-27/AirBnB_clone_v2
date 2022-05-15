@@ -28,13 +28,13 @@ def text(text):
 
 @app.route('/python', strict_slashes=False)
 @app.route('/python/(<text>)', strict_slashes=False)
-def python_text(text="is cool"):
+def python_text(text='is cool'):
     ''' display "Python " + text=(default)"is cool" '''
     return "Python {}".format(text.replace("_", " "))
 
 
 @app.route('/number', strict_slashes=False)
-@app.route('/number/<n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
     ''' Display n if n is an integer'''
     if n is int:
