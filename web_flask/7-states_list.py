@@ -66,6 +66,7 @@ def odd_or_even(n):
 @app.teardown_appcontext
 @app.route('/states_list', strict_slashes=False)
 def display_states(state.id, state.name):
+    ''' Display States with ID and names '''
     index = open("7-states_list.html", 'r')
     s = index.read().format("States", state.id, state.name)
     storage.close()
