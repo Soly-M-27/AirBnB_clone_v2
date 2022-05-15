@@ -38,7 +38,7 @@ def python_text(text="is cool"):
 def number(n):
     ''' Display n if n is an integer'''
     if n is int:
-        return ("{} is a number".format(n))
+        return ("{:d} is a number".format(n))
 
 
 if __name__ == '__main__':
