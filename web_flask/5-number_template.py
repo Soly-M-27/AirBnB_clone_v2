@@ -42,10 +42,11 @@ def number(n):
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def num_tem(n):
+    ''' If n is an int, display HTML page with n variable in it'''
     if n is int:
         index = open("5-number.html", 'r')
         s = index.read().format(n)
-        return s
+        return "{}".format(n)
 
 
 if __name__ == '__main__':
